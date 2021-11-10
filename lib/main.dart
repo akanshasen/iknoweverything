@@ -12,6 +12,9 @@ class IKnoweverythingWebApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'I Know Everything',
+      theme: ThemeData(
+        primarySwatch: Colors.orange,
+      ),
       home: QuestionAnswerPage(),
     );
   }
