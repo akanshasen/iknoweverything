@@ -77,6 +77,7 @@ class _QuestionAnswerPageState extends State<QuestionAnswerPage> {
 
               //TODO: resolve the error
               //
+
               if (_currentAnswer != null)
                 Container(
                   height: 250,
