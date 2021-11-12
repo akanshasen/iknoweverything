@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 class QuestionAnswerPage extends StatefulWidget {
   const QuestionAnswerPage({Key? key}) : super(key: key);
@@ -8,6 +9,20 @@ class QuestionAnswerPage extends StatefulWidget {
 }
 
 class _QuestionAnswerPageState extends State<QuestionAnswerPage> {
+  /// Text editing controller for question text field
+  TextEditingController _questionFieldController = TextEditingController();
+
+  /// Function - to handle the process of getting a yes or no answer
+  _handleGetAnswer() async {
+    try {
+      http.Response response =
+          await http.get(Uri.parse('https://yesno.wtf/api'));
+    } catch (err, stacktrace) {
+      print(err);
+      print(stacktrace);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
